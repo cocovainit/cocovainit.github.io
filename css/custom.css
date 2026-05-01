@@ -1,0 +1,65 @@
+/* ===== 🔮 毛玻璃特效 ===== */
+
+/* 博客主内容区域 - 毛玻璃卡片 */
+#recent-posts > .recent-post-item,
+#aside-content .card-widget,
+.layout > .recent-posts .recent-post-item,
+#post > div,
+#page > div,
+#archive > div,
+#tag > div,
+#category > div {
+  background: rgba(255, 255, 255, 0.4) !important;
+  backdrop-filter: blur(2px) !important;
+  -webkit-backdrop-filter: blur(2px) !important;
+  border-radius: 16px !important;
+  border: 1px solid rgba(255, 255, 255, 0.02) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.006) !important;
+}
+
+/* 顶部导航栏 */
+#nav {
+  background: rgba(255, 255, 255, 0.6) !important;
+  backdrop-filter: blur(15px) !important;
+  -webkit-backdrop-filter: blur(15px) !important;
+}
+
+/* 页脚 */
+#footer {
+  background: rgba(255, 255, 255, 0.4) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+}
+
+/* 页面背景 - 让背景透过毛玻璃显现 */
+body {
+  background-attachment: fixed !important;
+}
+
+/* ===== 🌙 夜间模式适配 ===== */
+[data-theme="dark"] #recent-posts > .recent-post-item,
+[data-theme="dark"] #aside-content .card-widget,
+[data-theme="dark"] .layout > .recent-posts .recent-post-item,
+[data-theme="dark"] #post > div,
+[data-theme="dark"] #page > div,
+[data-theme="dark"] #archive > div,
+[data-theme="dark"] #tag > div,
+[data-theme="dark"] #category > div {
+  background: rgba(30, 30, 40, 0.7) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+[data-theme="dark"] #nav {
+  background: rgba(20, 20, 30, 0.7) !important;
+}
+
+[data-theme="dark"] #footer {
+  background: rgba(20, 20, 30, 0.5) !important;
+}
+
+/* ===== 文章列表 hover 效果 ===== */
+.recent-post-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.3s ease;
+}
