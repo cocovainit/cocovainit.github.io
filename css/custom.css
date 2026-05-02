@@ -9,8 +9,8 @@
 #archive > div,
 #tag > div,
 #category > div {
-  background: rgba(255, 255, 255, 0.4) !important;
-  backdrop-filter: blur(2px) !important;
+  background: rgba(255, 255, 255, 0.6) !important;
+  backdrop-filter: blur(8px) !important;
   -webkit-backdrop-filter: blur(2px) !important;
   border-radius: 16px !important;
   border: 1px solid rgba(255, 255, 255, 0.02) !important;
@@ -62,4 +62,104 @@ body {
   transform: translateY(-2px);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1) !important;
   transition: all 0.3s ease;
+}
+
+/* ===== 🌙 夜间模式全面美化 ===== */
+
+/* 背景色 - 更柔和 */
+[data-theme="dark"] body {
+  background-color: #1a1a2e !important;
+  color: #e0e0e0 !important;
+}
+
+/* 文章标题 */
+[data-theme="dark"] .recent-post-info .article-title,
+[data-theme="dark"] #post .post-title {
+  color: #ffb7c5 !important;  /* 樱花粉标题 */
+}
+
+/* 链接颜色 */
+[data-theme="dark"] a {
+  color: #bb86fc !important;  /* 淡紫色链接 */
+}
+
+[data-theme="dark"] a:hover {
+  color: #ffb7c5 !important;  /* 悬停变粉 */
+}
+
+/* 文章内容区 */
+[data-theme="dark"] #article-container,
+[data-theme="dark"] .markdown-body {
+  color: #ccc !important;
+  line-height: 1.9 !important;
+}
+
+/* 正文字体更清晰 */
+[data-theme="dark"] #article-container p,
+[data-theme="dark"] .markdown-body p {
+  color: #c8c8d0 !important;
+}
+
+/* 代码块 */
+[data-theme="dark"] figure.highlight,
+[data-theme="dark"] pre {
+  background: #16162a !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 12px !important;
+}
+
+/* 引用块 */
+[data-theme="dark"] blockquote {
+  background: rgba(187, 134, 252, 0.08) !important;
+  border-left: 4px solid #bb86fc !important;
+  color: #bbb !important;
+}
+
+/* 标签云 */
+[data-theme="dark"] .tag-cloud-tags a {
+  background: rgba(187, 134, 252, 0.15) !important;
+  color: #bb86fc !important;
+}
+
+/* 分页按钮 */
+[data-theme="dark"] #pagination .page-number {
+  background: rgba(255, 255, 255, 0.05) !important;
+  color: #ccc !important;
+}
+
+[data-theme="dark"] #pagination .page-number.current {
+  background: #bb86fc !important;
+  color: #fff !important;
+}
+
+/* 滚动条美化 */
+[data-theme="dark"]::-webkit-scrollbar {
+  width: 8px;
+}
+[data-theme="dark"]::-webkit-scrollbar-track {
+  background: #1a1a2e;
+}
+[data-theme="dark"]::-webkit-scrollbar-thumb {
+  background: #3a3a5a;
+  border-radius: 4px;
+}
+
+/* 分割线 */
+[data-theme="dark"] hr {
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* ===== 毛玻璃卡片夜间加强 ===== */
+[data-theme="dark"] #recent-posts > .recent-post-item,
+[data-theme="dark"] #aside-content .card-widget {
+  background: rgba(22, 22, 42, 0.75) !important;
+  backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* 卡片hover发光 */
+[data-theme="dark"] .recent-post-item:hover {
+  box-shadow: 0 8px 30px rgba(187, 134, 252, 0.15) !important;
+  border-color: rgba(187, 134, 252, 0.3) !important;
 }
